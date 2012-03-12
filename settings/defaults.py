@@ -132,6 +132,8 @@ INSTALLED_APPS = (
     'reversion',
     'taggit',
     'sorl.thumbnail',
+
+    'apps.schools',
 )
 
 ARMSTRONG_SECTION_ITEM_MODEL = 'armstrong.apps.content.models.Content'
@@ -160,7 +162,7 @@ LOGGING = {
 }
 
 ARMSTRONG_PRESETS = {
-    'article_head': {'width': 600},
+    'article_head': {'width': 600, 'height': 300},
     'article_half': {'width': 270},
     'article_small': {'width': 175},
 }

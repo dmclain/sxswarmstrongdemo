@@ -1,0 +1,39 @@
+<div id='school-chart' style="width: 400px"></div>
+<script>
+$(document).ready(function() {
+	chart = new Highcharts.Chart({
+		chart: {
+			renderTo: 'school-chart',
+			plotBackgroundColor: null,
+			plotBorderWidth: null,
+			plotShadow: false
+		},
+		title: {
+			text: '{{ object.name }}'
+		},
+		plotOptions: {
+			pie: {
+				allowPointSelect: true,
+				cursor: 'pointer',
+				dataLabels: {
+					enabled: true,
+					color: '#000000',
+					connectorColor: '#000000',
+					formatter: function() {
+						return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %';
+					}
+				}
+			}
+		},
+		series: [{
+			type: 'pie',
+			name: 'Lunch Type',
+			data: [
+				['Free Lunch',   {{ object.free_lunch }}],
+				['Reduced Lunch', {{ object.reduced_lunch }}],
+				['Others', {{ object.standard }}]
+			]
+		}]
+	});
+});
+</script>

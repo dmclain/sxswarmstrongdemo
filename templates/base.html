@@ -55,6 +55,21 @@ This is based on Skeleton (getskeleton.com)
     <link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_URL }}images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_URL }}images/apple-touch-icon-114x114.png">
     {% endblock %}
+    {% block scripts %}
+    <!-- JavaScript at the bottom for fast page loading -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}javascript/jquery-1.7.1.min.js"><\/script>')</script>
+    <script src="{{ STATIC_URL }}javascript/jquery.masonry.min.js"></script>
+    <script src="{{ STATIC_URL }}javascript/highcharts/highcharts.js"></script>
+    <script>
+        $(document).ready(function() {
+          {% block scripts_on_ready %}
+          $("section#the-rest").masonry({itemSelector: "article"});
+          {% endblock %}
+        });
+    </script>
+    {% endblock %}
 
 </head>
 
@@ -81,19 +96,5 @@ This is based on Skeleton (getskeleton.com)
         </section>
     </div>
 
-    {% block scripts %}
-    <!-- JavaScript at the bottom for fast page loading -->
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}javascript/jquery-1.7.1.min.js"><\/script>')</script>
-    <script src="{{ STATIC_URL }}javascript/jquery.masonry.min.js"></script>
-    <script>
-        $(document).ready(function() {
-          {% block scripts_on_ready %}
-          $("section#the-rest").masonry({itemSelector: "article"});
-          {% endblock %}
-        });
-    </script>
-    {% endblock %}
 </body>
 </html>
