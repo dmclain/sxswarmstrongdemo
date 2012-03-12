@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load layout_helpers %}
+
+{% block content %}
+    {% comment %}
+        Note, this `if well` statement is only here to enable the
+        welcome page for an Armstrong site that does not have any
+        data in it.  For production sites, this may be unnecessary.
+    {% endcomment %}
+
+    {% if well %}
+        {% render_iter well.items|slice:":15" %}
+            {% render_next "big" %}
+            {% render_next "big" %}
+            {% render_next "standard" %}
+            {% render_next "standard" %}
+            {% render_next "standard" %}
+            <section id="the-rest">
+                {% render_remainder "half" %}
+            </section>
+        {% endrender_iter %}
+    {% else %}
+        {% include "armstrong/includes/welcome.html" %}
+    {% endif %}
+{% endblock %}

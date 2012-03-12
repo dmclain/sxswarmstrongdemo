@@ -1,0 +1,18 @@
+{% load related_content content_helpers %}
+<article class="alpha six columns clearfix">
+    <h4>{{ object.title }}</h4>
+
+    <div class="image left">
+        {% with object.related.lead_art.0 as lead_art %}
+        {% if lead_art %}
+        <img src='{{ lead_art.image|thumbnail:"article_small" }}'/>
+        {% endif %}
+        {% endwith %}
+    </div>
+    {% autoescape off %}
+    <p>
+        {{ object.summary }}
+        <a href="{% url article_detail slug=object.slug %}">Show more</a>
+    </p>
+    {% endautoescape %}
+</article>
