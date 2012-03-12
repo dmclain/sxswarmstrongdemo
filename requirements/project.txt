@@ -7,7 +7,6 @@ https://github.com/dmclain/armstrong.cli/tarball/installable_templates
 https://github.com/dmclain/armstrong.apps.related_content/tarball/related_content2
 https://github.com/dmclain/armstrong.apps.articles/tarball/related_content
 armstrong.apps.content==1.0.1
-armstrong.cli==1.2.0.alpha.0
 armstrong.cli.experimental==0.1.0
 armstrong.core.arm-access==1.0.5
 armstrong.core.arm-content==1.1.0
