@@ -8,11 +8,9 @@
 {% block content %}
     <h4>{{ object.title }}</h4>
     <div class="byline">{{ object.authors }} - {{ object.pub_date }}</div>
-        {% with object.related.interstitial.0 as interstitial %}
-        {% if interstitial %}
-	    <div style="float:right">{% render_model interstitial 'interstitial' %}</div>
-        {% endif %}
-        {% endwith %}
+        {% for interstitial in object.related.interstitial %}
+    	    <div style="float:right">{% render_model interstitial 'interstitial' %}</div>
+        {% endfor %}
 
     {% autoescape off %}
     <div class="story">{{ object.body }}</div>
