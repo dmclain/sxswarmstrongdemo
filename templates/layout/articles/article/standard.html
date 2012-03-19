@@ -1,11 +1,11 @@
-{% load related_content content_helpers %}
+{% load related_content layout_helpers %}
 <article class="clearfix">
     <h4>{{ object.title }}</h4>
 
     <div class="image left">
         {% with object.related.lead_art.0 as lead_art %}
         {% if lead_art %}
-        <img src='{{ lead_art.image|thumbnail:"article_small" }}'/>
+            {% render_model lead_art "article_small" %}
         {% endif %}
         {% endwith %}
     </div>

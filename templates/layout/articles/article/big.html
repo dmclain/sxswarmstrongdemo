@@ -1,4 +1,4 @@
-{% load content_helpers %}
+{% load layout_helpers %}
 <article class="big clearfix">
     <h2>{{ object.title }}</h2>
     {% autoescape off %}
@@ -6,7 +6,7 @@
     <div class="image left">
         {% with object.related.lead_art.0 as lead_art %}
         {% if lead_art %}
-        <img src='{{ lead_art.image|thumbnail:"article_half" }}'/>
+            {% render_model lead_art "article_half" %}
         {% endif %}
         {% endwith %}
     </div>
