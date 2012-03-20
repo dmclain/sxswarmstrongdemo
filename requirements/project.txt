@@ -11,6 +11,7 @@ armstrong.core.arm-wells==1.3.3
 armstrong.cli==1.1.0
 armstrong.apps.images==1.1.0
 armstrong.dev==1.10.2
+armstrong.hatband==1.2.3
 armstrong.utils.backends==1.0.0
 certifi==0.0.8
 chardet==1.0.1
@@ -27,6 +28,5 @@ pycrypto==2.5
 sorl-thumbnail==11.05.2
 ssh==1.7.13
 wsgiref==0.1.2
-https://github.com/dmclain/armstrong.apps.related_content/tarball/rc2rgk
+https://github.com/dmclain/armstrong.apps.related_content/tarball/related_content2
 https://github.com/dmclain/armstrong.apps.articles/tarball/related_content
-https://github.com/dmclain/armstrong.hatband/tarball/rawgenerickey
