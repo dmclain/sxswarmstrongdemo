@@ -1,1 +1,1 @@
-web: armstrong runserver 0.0.0.0:$PORT
+web: ./load_then_run.sh
