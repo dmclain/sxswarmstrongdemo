@@ -1,1 +1,1 @@
-web: ./load_then_run.sh
+web: django-admin.py runserver 0.0.0.0:$PORT
