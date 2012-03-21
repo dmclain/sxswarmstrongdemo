@@ -22,6 +22,7 @@ django-model-utils==0.6.0
 django-reversion==1.4
 django-taggit==0.9.3
 fudge==1.0.3
+gunicorn==0.14.2
 lxml==2.3.3
 pep8==0.6.1
 psycopg2==2.4.4
@@ -31,4 +32,3 @@ ssh==1.7.13
 wsgiref==0.1.2
 https://github.com/dmclain/armstrong.apps.related_content/tarball/related_content2
 https://github.com/dmclain/armstrong.apps.articles/tarball/related_content
-gunicorn==0.14.2
