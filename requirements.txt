@@ -23,7 +23,7 @@ django-taggit==0.9.3
 fudge==1.0.3
 lxml==2.3.3
 pep8==0.6.1
-psycopg2=2.4.4
+psycopg2==2.4.4
 pycrypto==2.5
 sorl-thumbnail==11.05.2
 ssh==1.7.13
