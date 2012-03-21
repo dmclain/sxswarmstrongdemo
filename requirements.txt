@@ -30,4 +30,3 @@ wsgiref==0.1.2
 https://github.com/dmclain/armstrong.apps.related_content/tarball/rc2rgk
 https://github.com/dmclain/armstrong.apps.articles/tarball/related_content
 https://github.com/dmclain/armstrong.hatband/tarball/rawgenerickey
-pysqlite==2.6.0
