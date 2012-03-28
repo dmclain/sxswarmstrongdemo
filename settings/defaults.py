@@ -124,6 +124,7 @@ INSTALLED_APPS = (
     'armstrong.apps.articles',
     'armstrong.apps.content',
     'armstrong.apps.images',
+    'armstrong.apps.embedded_video',
     'armstrong.apps.related_content',
     'armstrong.hatband',
 
@@ -138,6 +139,7 @@ INSTALLED_APPS = (
 )
 
 ARMSTRONG_SECTION_ITEM_MODEL = 'armstrong.apps.content.models.Content'
+ARMSTRONG_EXTERNAL_VIDEO_BACKEND = 'armstrong.core.arm_content.video.backends.youtube.YouTubeBackend'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

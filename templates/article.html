@@ -8,11 +8,16 @@
 {% block content %}
     <h4>{{ object.title }}</h4>
     <div class="byline">{{ object.authors }} - {{ object.pub_date }}</div>
-        {% for interstitial in object.related.interstitial %}
-    	    <div style="float:right">{% render_model interstitial 'interstitial' %}</div>
-        {% endfor %}
 
     {% autoescape off %}
-    <div class="story">{{ object.body }}</div>
+    <div class="story">
+        {% for lead_art in object.related.lead_art %}
+            <div style="float:right">{% render_model lead_art 'interstitial' %}</div>
+        {% endfor %}
+        {{ object.body }}
+        {% for interstitial in object.related.interstitial %}
+            <div style="float:right">{% render_model interstitial 'interstitial' %}</div>
+        {% endfor %}
+    </div>
     {% endautoescape %}
 {% endblock %}

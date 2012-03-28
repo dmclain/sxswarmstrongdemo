@@ -41,7 +41,7 @@ urlpatterns = patterns('',
     url(r'^$',
             QuerySetBackedWellView.as_view(well_title="Front Page",
                     template_name="index.html",
-                    queryset=Article.published.all()),
+                    queryset=Article.published.all().order_by('-pub_date')),
             name="home"),
 
     url(r'^section/(?P<full_slug>[-\w/]+)',
